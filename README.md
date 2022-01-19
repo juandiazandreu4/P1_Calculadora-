@@ -58,3 +58,5 @@ En Windows:
 * Modificar CourseID y detalles del package.json para alinearlo con la tarea de Moodle
 * Añadir instrucciones netcat Windows
 * ¿Especificar la puntuación?
+* He añadido 3 queries diferentes. Originalmente sólo había una (la suma). Hay que decidir si dejar sólo eso.
+* Se podría hacer que la query de cada usuario dependa de su correo electrónico (p.e., sumar el número de vocales y el de consonantes), así cada alumno tiene un trabajo diferente.
