@@ -50,3 +50,11 @@ En Windows:
 
 #TODO
 ... #USAR LINUX# ...
+
+
+# TODO
+
+* Retocar el enunciado
+* Modificar CourseID y detalles del package.json para alinearlo con la tarea de Moodle
+* Añadir instrucciones netcat Windows
+* ¿Especificar la puntuación?
