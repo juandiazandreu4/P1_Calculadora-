@@ -115,6 +115,10 @@ TestUtils.search = (b, a) => {
 var orig_it = it;
 var num_tests = 1;
 
+TestUtils.critical = function(name, score, func) {
+    return TestUtils.scored(name, -1, func);
+};
+
 TestUtils.scored = function(name, score, func) {
     name = `${num_tests}: ${name}`;
     num_tests++;
