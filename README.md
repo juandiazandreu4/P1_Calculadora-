@@ -1,15 +1,55 @@
+<img  align="left" width="150" style="float: left;" src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/CEI/LOGOTIPO%20leyenda%20color%20JPG%20p.png">
+<img  align="right" width="60" style="float: right;" src="http://www.dit.upm.es/figures/logos/ditupm-big.gif">
+
+<br/><br/><br/>
+
 # Práctica 1 - Calculadora HTTP
+
+Versión: 19 de Enero de 2022
+
+## Objetivos
+
+* Comprender el funcionamiento de las peticiones y las respuestas en HTTP
+* Elaborar peticiones HTTP de manera manual
+* Utilizar herramientas conocidas (p.e., netcat) para depurar peticiones HTTP.
+
+## Descripción de la práctica
 
 En la URL http://malamen.dit.upm.es/calc hay desplegada una calculadora HTTP que sirve para sumar, restar, dividir y multiplicar dos números, obteniendo el resultado en formato JSON.
 
 Para usar esta calculadora debe enviarse una petición HTTP de tipo POST a la URL anterior, y pasar en el cuerpo (body) los dos números y el operador que se quieran aplicar.
 
-Debe usarse para el body el mismo formato que se usa en un formulario.
+Hay muchas formas de realizar esa consulta: desde utilizar código Javascript en cliente, hasta el uso de herramientas específicas como cURL.
+Sin embargo, todas ellas usan el protocolo HTTP por debajo.
+
+En esta práctica, elaboraremos varias peticiones HTTP de manera manual que enviaremos al servidor, y comprobaremos que la respuesta obtenida es la esperada.
+
+Para asegurar que las peticiones son correctas y coml
+
+## Descargar el código del proyecto
+
+Para poder utilizar el autocorector en esta práctica, es necesario utilizar la **versión 12 de Node.js**.
+El proyecto debe clonarse en el ordenador en el que se está trabajando:
+
+```
+$ git clone https://github.com/CORE-UPM/P1_calculadora_HTTP
+```
+
+A continuación se debe acceder al directorio de trabajo, e instalar todas las dependencias.
+
+```
+$ cd P1_calculadora_HTTP
+$ npm install
+```
+
+## Tareas
+
+Todas las tareas en esta práctica consistirán en escribir en texto plano una petición de tipo POST al servidor de calculadora.
+
+El cuerpo de la petición debe user el mismo formato que un formulario.
 El tipo de contenido debe ser `Content-type: application/x-www-form-urlencoded`, los operandos deben asignarse a las variables n1 y n2, el operador a la variable op, todo separado con "&", y usando escapado URL.
 
-Así, para suma 3 y 4, hay que pasar en el body la siguiente cadena:
-
-n1=3&n2=4&op=%2B
+Así, para suma 3 y 4, hay que pasar en el body la siguiente cadena: `n1=3&n2=4&op=%2B`.
 
 Algunos operadores han de ser escapados (transformados para su uso en URL).
 Para escapar el operador suma debe usarse la codificación %2B, y para la multiplicación %2F.
@@ -23,18 +63,33 @@ Content-Length: tamaño del body
 
 La respuesta HTTP que devuelve el servidor es un objeto JSON que puede contener el resultado pedido, o un error si hay algún problema.
 
-Se pide escribir varios ficheros con peticiones al servidor, siguiendo las siguientes especificaciones:
+Se pide escribir varios ficheros con peticiones al servidor, siguiendo las especificaciones de los apartados siguientes.
 
-* `suma.txt`, una petición para sumar los valores `3` y `4`.
-* `error400.txt`, una petición inválida, que causa que el servidor devuelva un error 400.
-* `incompleta.txt`, una petición que causa que el servidor "quede a la espera de más datos", causando un timeout después de un tiempo.
+### Petición inválida
+
+La primera tarea será escribir en el fichero `error400.txt` una petición que cause que el servidor devuelva una respuesta con un código HTTP 400. 
+En otras palabras, debe ser una petición errónea.
 
 
-# Comprobar las peticiones
+### Suma de dos valores
 
-Puede probar 
+Escribir en el fichero `suma.txt` una petición a la calculadora de la suma de dos valores: `3` y `4`.
 
-## En *nix (GNU/Linux, Mac, BSD)
+### Petición incompleta
+
+
+Por último, escriba una petición en el fichero `incompleta.txt` que cause que el servidor "quede a la espera de más datos", causando un timeout después de un tiempo.
+Es decir, la petición debe ser correcta, pero incompleta.
+
+Pista: ¿cómo sabe el servidor cuándo ha terminado una petición?.
+
+
+### Comprobar las peticiones
+
+Antes de probar el autocorector, será necesario comprobar manualmente cada una de las peticiones.
+La forma de hacerlo dependerá del sistema operativo usado.
+
+#### En *nix (GNU/Linux, Mac, BSD)
 
 (También válido en la bash shell de Windows o en WSL (Windows Subsystem for Linux))
 
@@ -48,15 +103,73 @@ Este comando escribirá en pantalla la respuesta HTTP recibida, y en su body deb
 
 En Windows:
 
-#TODO
-... #USAR LINUX# ...
+#### En otros sistemas operativos
+
+<!-- #TODO -->
+<!-- Para usar en Windows lo mejor es formatear e instalar Linux -->
+
+
+#### Probar
+
+Ahora el servidor debe responder a la petición **http://localhost:3000/posts** mostrando el listado de todos los posts.
+
+## Prueba de la práctica
+
+Para ayudar al desarrollo, se provee una herramienta de autocorrección que prueba las distintas funcionalidades que se piden en el enunciado. Para utilizar esta herramienta debes tener node.js (y npm) (https://nodejs.org/es/) y Git instalados.
+
+Para instalar y hacer uso de la herramienta de autocorrección en el ordenador local, ejecuta los siguientes comandos en el directorio raíz del proyecto, es decir, en el directorio padre del directorio **post_express**:
+
+```
+$ sudo npm install -g autocorector    ## Instala el programa de test
+$ autocorector                   ## Pasa los tests al fichero a entregar
+............................     ## en el directorio de trabajo
+... (resultado de los tests)
+```
+
+También se puede instalar como paquete local, en el caso de que no dispongas de permisos en 
+el ordenador en el que estás trabajando:
+
+```
+$ npm install autocorector     ## Instala el programa de test
+$ npx autocorector             ## Pasa los tests al fichero a entregar
+............................   ## en el directorio de trabajo
+... (resultado de los tests)
+```
+
+Se puede pasar la herramienta de autocorrección tantas veces como se desee sin ninguna repercusión en la calificación.
+
+
+
+## Instrucciones para la Entrega y Evaluación.
+
+Una vez satisfecho con su calificación, el alumno puede subir su entrega a Moodle con el siguiente comando:
+
+```
+$ autocorector --upload
+```
+
+o, si se ha instalado como paquete local:
+
+```
+$ npx autocorector --upload
+```
+
+La herramienta de autocorrección preguntará por el correo del alumno y el token de Moodle. 
+En el enlace **https://www.npmjs.com/package/autocorector** se proveen instrucciones para encontrar dicho token.
+
+**RÚBRICA**: Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la parte indicada es correcta:
+
+- **40%:** Petición errónea 
+- **40%:** Petición de una suma
+- **20%:** Petición incompleta
+
+Si pasa todos los tests se dará la máxima puntuación.
 
 
 # TODO
 
 * Retocar el enunciado
+* Comprobar la versión mínima de Node (decimos la 12 en el enunciado)
 * Modificar CourseID y detalles del package.json para alinearlo con la tarea de Moodle
 * Añadir instrucciones netcat Windows
-* ¿Especificar la puntuación?
-* He añadido 3 queries diferentes. Originalmente sólo había una (la suma). Hay que decidir si dejar sólo eso.
 * Se podría hacer que la query de cada usuario dependa de su correo electrónico (p.e., sumar el número de vocales y el de consonantes), así cada alumno tiene un trabajo diferente.
