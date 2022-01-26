@@ -182,5 +182,4 @@ Si pasa todos los tests se dará la máxima puntuación.
 
 # TODO
 
-* Modificar CourseID y detalles del package.json para alinearlo con la tarea de Moodle
 * Se podría hacer que la query de cada usuario dependa de su correo electrónico (p.e., sumar el número de vocales y el de consonantes), así cada alumno tiene un trabajo diferente.
