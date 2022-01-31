@@ -178,8 +178,3 @@ En el enlace **https://www.npmjs.com/package/autocorector** se proveen instrucci
 - **20%:** Petición incompleta
 
 Si pasa todos los tests se dará la máxima puntuación.
-
-
-# TODO
-
-* Se podría hacer que la query de cada usuario dependa de su correo electrónico (p.e., sumar el número de vocales y el de consonantes), así cada alumno tiene un trabajo diferente.
