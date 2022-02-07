@@ -97,8 +97,11 @@ describe("Tests Práctica 1", function() {
                this.msg_err = `could not read ${file}`;
                try {
                 var [resp, code, js] = await callServer(data);
-                   throw new Error("La query funcionó, y no debería hacerlo");
-               } catch(ex) {}
+               } catch(ex) {
+                   return null;
+               }
+               this.msg_err = `La query funcionó, y no debería hacerlo`;
+               throw new Error(this.msg_err);
            });
     });
 });
