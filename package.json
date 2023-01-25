@@ -5,8 +5,11 @@
     "version": "0.1.0",
     "info": {
         "githubURL": "CORE-UPM/P1_calculadora_HTTP",
-        "serverUrl": "https://autocorector.dit.upm.es/",
+        "serverUrl": "https://aat.dit.upm.es/",
         "courseId": "395",
-        "assignmentId": "48277"
+        "assignmentId": "12965"
+    },
+    "dependencies": {
+        "autocorector": "^3.1.6"
     }
 }
