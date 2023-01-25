@@ -5,7 +5,7 @@
 
 # Práctica 1 - Calculadora HTTP
 
-Versión: 19 de Enero de 2022
+Versión: 25 de Enero de 2023
 
 ## Objetivos
 
@@ -27,19 +27,7 @@ En esta práctica, elaboraremos varias peticiones HTTP de manera manual que envi
 
 ## Descargar el código del proyecto
 
-Para poder utilizar el autocorector en esta práctica, es necesario utilizar la **versión 16 de Node.js, superior a 16.8 (https://nodejs.org/es/) y Git (https://git-scm.com/)**.
-El proyecto debe clonarse en el ordenador en el que se está trabajando:
-
-```
-$ git clone https://github.com/CORE-UPM/P1_calculadora_HTTP
-```
-
-A continuación se debe acceder al directorio de trabajo, e instalar todas las dependencias.
-
-```
-$ cd P1_calculadora_HTTP
-$ npm install
-```
+Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#descargar-el-c%C3%B3digo-del-proyecto).
 
 ## Tareas
 
@@ -127,51 +115,26 @@ Este comando escribirá en pantalla la respuesta HTTP recibida, y en su body deb
     ```
 
 
-## Prueba de la práctica
+## Pruebas con el autocorector
 
-Para ayudar al desarrollo, se provee una herramienta de autocorrección que prueba las distintas funcionalidades que se piden en el enunciado. Para utilizar esta herramienta debes tener node.js (y npm) (https://nodejs.org/es/) y Git instalados.
+Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#pruebas-con-el-autocorector).
 
-Para instalar y hacer uso de la herramienta de autocorrección en el ordenador local, ejecuta los siguientes comandos en el directorio raíz del proyecto:
+## Pruebas manuales y capturas de pantalla
 
-```
-$ sudo npm install -g autocorector    ## Instala el programa de test
-$ autocorector                   ## Pasa los tests al fichero a entregar
-............................     ## en el directorio de trabajo
-... (resultado de los tests)
-```
+Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#pruebas-manuales-y-capturas-de-pantalla).
 
-También se puede instalar como paquete local, en el caso de que no dispongas de permisos en 
-el ordenador en el que estás trabajando:
+Capturas a entregar con esta práctica: 
 
-```
-$ npm install autocorector     ## Instala el programa de test
-$ npx autocorector             ## Pasa los tests al fichero a entregar
-............................   ## en el directorio de trabajo
-... (resultado de los tests)
-```
-
-Se puede pasar la herramienta de autocorrección tantas veces como se desee sin ninguna repercusión en la calificación.
-
-
+- Captura 1:
+- Captura 2:
 
 ## Instrucciones para la Entrega y Evaluación.
+Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#instrucciones-para-la-entrega-y-evaluaci%C3%B3n
+).
 
-Una vez satisfecho con su calificación, el alumno puede subir su entrega a Moodle con el siguiente comando:
+## RÚBRICA
 
-```
-$ autocorector --upload
-```
-
-o, si se ha instalado como paquete local:
-
-```
-$ npx autocorector --upload
-```
-
-La herramienta de autocorrección preguntará por el correo del alumno y el token de Moodle. 
-En el enlace **https://www.npmjs.com/package/autocorector** se proveen instrucciones para encontrar dicho token.
-
-**RÚBRICA**: Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la parte indicada es correcta:
+Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la parte indicada es correcta:
 
 - **40%:** Petición errónea 
 - **40%:** Petición de una suma
