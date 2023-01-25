@@ -132,7 +132,7 @@ Capturas a entregar con esta práctica:
 Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#instrucciones-para-la-entrega-y-evaluaci%C3%B3n
 ).
 
-## RÚBRICA
+## Rúbrica
 
 Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la parte indicada es correcta:
 
