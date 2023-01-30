@@ -125,8 +125,17 @@ Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/m
 
 Capturas a entregar con esta práctica: 
 
-- Captura 1:
-- Captura 2:
+- Captura 1: Captura de la respuesta a la petición errónea.
+<kbd>
+<img src="https://user-images.githubusercontent.com/47325335/215512403-056b2342-95fd-4f43-b3a0-890107359c5d.png" alt="drawing" width="400"/>
+</kbd>
+
+
+- Captura 2: Captura de la respuesta a la petición correcta con la suma de dos valores.
+<kbd>
+<img src="https://user-images.githubusercontent.com/47325335/215512506-3fd9603e-8d95-4e26-9f19-acbc5ec838f1.png" alt="drawing" width="400"/>
+</kbd>
+
 
 ## Instrucciones para la Entrega y Evaluación.
 Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#instrucciones-para-la-entrega-y-evaluaci%C3%B3n
