@@ -2,7 +2,7 @@
 /* eslint-disable no-undef*/
 // IMPORTS
 const path = require("path");
-const {feedback,path_assignment,err, warn_errors, scored, log, checkFileExists} = require("./testutils");
+const {feedback,path_assignment,err, warn_errors, scored, log, checkFileExists} = require("../utils/testutils");
 const spawn = require("child_process").spawn;
 const fs = require("fs");
 const net = require('net');
