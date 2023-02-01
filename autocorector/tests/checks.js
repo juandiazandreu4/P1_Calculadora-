@@ -11,7 +11,7 @@ const process = require("process");
 
 const CALC = "malamen.dit.upm.es";
 const PORT = 80;
-const TIMEOUT = 5000;
+const TIMEOUT = 8000;
 
 async function callServer(formattedJson, server=CALC, port=PORT) {
     return new Promise((resolve, reject) => {
