@@ -2,6 +2,7 @@
 /* eslint-disable no-undef*/
 // IMPORTS
 const path = require("path");
+const expect = require('chai').expect
 const {feedback,path_assignment,err, warn_errors, scored, log, checkFileExists} = require("../utils/testutils");
 const spawn = require("child_process").spawn;
 const fs = require("fs");
@@ -74,8 +75,8 @@ describe("Tests Práctica 1", function() {
     describe("Funcionales", function(){
         scored("suma válida", 4, async function(){ 
                let file = 'suma.txt';
+               this.msg_err = `No se puede leer el fichero ${file}`;
                const data = fs.readFileSync(file, 'utf8');
-               this.msg_err = `could not read ${file}`;
                let [resp, code, js] = await callServer(data);
                this.msg_err = "La respuesta no da un código 200";
                code.should.be.equal(200);
@@ -84,8 +85,8 @@ describe("Tests Práctica 1", function() {
            });
         scored("error 400", 4, async function(){ 
                let file = 'error400.txt'
+               this.msg_err = `No se puede leer el fichero ${file}`;
                const data = fs.readFileSync(file, 'utf8');
-               this.msg_err = `could not read ${file}`;
                var [resp, code, js] = await callServer(data);
                this.msg_err = "La respuesta no da un código 400";
                code.should.be.equal(400);
@@ -93,8 +94,9 @@ describe("Tests Práctica 1", function() {
 
         scored("query incompleta", 2, async function(){ 
                let file = 'incompleta.txt';
+               this.msg_err = `No se puede leer el fichero ${file}`;
                const data = fs.readFileSync(file, 'utf8');
-               this.msg_err = `could not read ${file}`;
+               expect(data.length).to.be.above(1);
                try {
                 var [resp, code, js] = await callServer(data);
                } catch(ex) {
