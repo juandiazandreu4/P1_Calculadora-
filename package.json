@@ -9,7 +9,7 @@
         "githubURL": "CORE-UPM/P1_calculadora_HTTP",
         "serverUrl": "https://aat.dit.upm.es/",
         "courseId": "395",
-        "assignmentId": "12965"
+        "assignmentId": "6462"
     },
     "dependencies": {
         "autocorector": "^3.1.6"
