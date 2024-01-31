@@ -43,10 +43,10 @@ Para escapar el operador suma debe usarse la codificación %2B, y para la multip
 
 La petición HTTP debe incluir también otras cabeceras, como por ejemplo:
 
-Host: direccion del servidor
-Accept: text/html,text/text,application/json
-Connection: keep-alive para no cerrar la conexión
-Content-Length: tamaño del body
+- Host: direccion del servidor
+- Accept: text/html,text/text,application/json
+- Connection: keep-alive para no cerrar la conexión
+- Content-Length: tamaño del body
 
 La respuesta HTTP que devuelve el servidor es un objeto JSON que puede contener el resultado pedido, o un error si hay algún problema.
 
